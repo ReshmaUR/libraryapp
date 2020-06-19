@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* header styling */
+.navbar a {
+  font-family:'Oswald',arial narrow,sans-serif;
+}
+.navbar-bright {
+    background-color:#111166;
+    color:#fff;
+    margin-bottom: 0;
+    border-width: 0;
+  }
+  /* home styling */
+  .navbar-bright a {
+    color:#ccccdd;
+    font-size:14px;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+  }
+  
+  .navbar-bright li > a:hover {
+    background-color:#000044;
+  }
+
+  /* form */
+  .box{
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 50px;
+    background: rgba(0,0,0,0.7);
+    z-index: 0;
+    overflow: hidden;
+}
+.box h1{
+    color: white;
+    font-weight: 500;
+}
+.entry{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    height: 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.entry:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+.sub{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 18px;
+}
+.sub:hover{
+   background: #2ecc71;
+   color: black;
+}
+/* footer */
+footer {
+  width: 100%;
+  margin-top:54%;
+  /* 52% */
+  background-color:#cecece;
+  height: 5em;
+}
+#newicon{
+  padding-top: 12px;
+}
+#message{
+  /* padding-left: 800px; */
+  margin-top: 200px;
+  margin-left: 950px;
+  border-radius: 50px;
+  opacity: 0.7;
+}
+#error,#error_mob,#error_pass,#error_pass_con{
+  font-family: cursive;
+  font-size: 16px;
+}

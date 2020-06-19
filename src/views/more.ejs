@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <!-- header  -->
+  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <%for(i=0;i<nav.length;i++){%>
+            <li>
+              <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+            </li>
+            <%}%>
+
+        </ul>
+        <!-- search field -->
+        <div class="search-box">
+          <input class="search-text" type="text" name="" placeholder="Type to search">
+          <a class="search-btn" href="#">
+            <i class="glyphicon glyphicon-search"></i>
+          </a>
+        </div> 
+        <!-- end of search field -->
+      </nav>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!--  main head,box inside container and spacer -->
+  <div id="masthead"> 
+    <!-- main heading container --> 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>State Central Library
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <!-- box inside container -->
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of box inside container -->
+      </div> 
+    </div>
+    <!-- end of main heading container -->
+    <!-- spacer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div> 
+    </div>
+    <!-- end of spacer -->
+  </div>
+  <!-- end of main head,box inside container and spacer -->
+  <!-- main body container -->
+  <div class="container">
+    <!-- main row -->
+    <div class="row">
+      <!-- main column -->
+      <div class="col-md-12">
+         <!--panel starting  -->
+        <div class="panel">
+          <!-- panel body starting -->
+          <div class="panel-body">
+            <!-- row for library details para1-->
+            <div class="row">    
+              <br>
+              <div class="col-md-3 col-sm-3 text-center">
+                <img alt="" src="images/librarypic.jpeg" style="width:250px;height:250px">
+              </div>
+              <div class="col-md-9 col-sm-9">
+                <h3 id="first">State Central library, Trivandrum</h3>
+                <p class="para">
+                  The Trivandrum Public Library (State Central Library) is one of the oldest Libraries in India. It was established in the year 1829 A.D. during the reign of His Highness Sree Swathi Thirunal Maharaja of Travancore. The work of starting and organising the Library was entrusted to Col.Edward Cadogan, then the British Resident who was the grand son of Sir Hans Sloan, the founder of the British Museum. He was the first president of the Trivandrum Public Library committee. The successors of His Highness Sree Swathi Thirunal and the British Resident Col. Cadogan took active interest in the advancement and progress of the Library.
+                </p>
+              </div> 
+            </div>
+            <!-- end of row for library details para1 -->
+            <!-- row for library details para2-->
+            <div class="row">  
+              <div class="col-md-12">
+                <p class="para">
+                  At that time only a privileged class who were called to attend the Durbar of His Highness the Maharaja was allowed admission to the Library. The Library was then known as “Trivandrum People’s Library”. 
+                </p>  
+              </div>  
+            </div>
+            <!-- end of row for library details para2 -->
+            <!-- row for library details para3-->
+            <div class="row"> 
+              <div class="col-md-12">
+                <p class="para">
+                  In the year 1898 AD the assets of Trivandrum People’s Library were transferred to the administrative control of Government on condition that “a suitable building should be erected for housing the Library for the benefit of the Public and that Government should undertake its maintenance in a suitable manner under such regulations as the Government may deem fit from time to time”. In 1898 this institution was opened to the public. His Highness Sree Moolam Thirunal took a special interest in the development of this library. He ordered the construction of a beautiful building for housing the library in 1900. AD the present building of architectural beauty in the Gothic style was put up in Trivandrum City in commemoration of the Diamond Jubilee of Her Majesty Queen Victoria. In the year 1938 A.D the administration of the Trivandrum Public Library was handed over to University of Travancore. In 1948 by a resolution of the State Legislature, the State Government was directed to take over the administration of the Library from the University. 
+                </p>
+              </div>     
+            </div>
+            <!-- end of row for library details para3 -->
+            <!-- row for library details para4-->
+            <div class="row"> 
+              <div class="col-md-12">
+                <div class="row"> 
+                  <div class="col-md-12">
+                    <p class="para">
+                      In the year 1958, the Trivandrum Public Library was declared as ‘State Central Library’. Subsequently in the year 1988 the library was given the status of a minor department under the administrative control of Higher Education Department with the State Librarian as Head of the Department. In the year 1992 Government declared Malayalam as the official language of this department. 
+                     </p>
+                  </div>     
+                </div>
+              </div>     
+            </div>
+            <!-- end of row for library details para4 -->
+          </div>
+          <!-- end of panel body -->
+        </div>
+        <!-- end of panel -->
+      </div>
+      <!--end of main column -->
+    </div>
+    <!--end of main row -->
+  </div>
+  <!-- end of main body container -->                                                                              
+  <!--container for follow us buttons -->
+  <div class="container">
+    <div class="row">
+      <div class="col col-sm-12">
+        <h1>Follow Us</h1>
+        <div class="btn-group">
+          <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	        <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	        <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of container for follow us buttons -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-inline" id="newicon">
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/google_plus_red.png" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <p><h3 id="foot">Contact Us</h3>Administrative Assistant & State public Information Office <br>
+            Kerala State Central Library
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+</body>
+</html>

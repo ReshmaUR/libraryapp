@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body background="images/grnd4.jpg">
+  <!-- header -->
+  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+        <nav class="collapse navbar-collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <%for(i=0;i<nav.length;i++){%>
+              <li>
+                <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+              </li>
+            <%}%>
+            
+          </ul>
+          <!-- search field -->
+          <div class="search-box">
+            <input class="search-text" type="text" name="" placeholder="Type to search">
+              <a class="search-btn" href="#">
+                <i class="glyphicon glyphicon-search"></i>
+              </a>
+          </div> 
+          <!-- end of search field -->
+        </nav>
+      </div>
+  </header>
+  <!-- end of header -->
+  <!-- form -->
+  <div class="form">
+    <form action="/" class="box" onsubmit="add();">
+        <h1>Add book</h1>
+        <input type="text" class="entry" name="" placeholder="Name of Book" required>
+        <input type = "text" class="entry" placeholder ="Name of Author" required>
+        <input type="text" class="entry" name="" placeholder="Genre of Book" required>
+        <span id="com">Choose the image of book</span>
+        <!-- <p id="com">Choose the image of book</p> -->
+        <input type="file" accept="image/*" id="choose" required>
+        <input type="submit" class="sub" name="" value="Submit">
+    </form>
+  </div>
+  <!-- end of form -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-inline" id="newicon">
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/google_plus_red.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer> 
+  <!--end of footer  -->
+  <script src="/js/script.js"></script>
+</body>
+</html>

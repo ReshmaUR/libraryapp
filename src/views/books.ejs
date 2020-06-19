@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- header -->
+  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+        <nav class="collapse navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <%for(i=0;i<nav.length;i++){%>
+                <li>
+                  <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+                </li>
+              <%}%>
+              
+            </ul>
+            <!-- search field -->
+            <div class="search-box">
+              <input class="search-text" type="text" name="" placeholder="Type to search">
+                <a class="search-btn" href="#">
+                  <i class="glyphicon glyphicon-search"></i>
+                </a>
+            </div> 
+            <!-- end of search field -->
+          </nav>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!--  main head,box inside container and spacer -->
+  <div id="masthead">
+    <!--main heading container  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Book Shelf
+            <p class="lead"></p>
+          </h1>
+        </div>
+        <!-- box inside container -->
+        <div class="col-md-5">
+          <div class="well well-lg"> 
+            <div class="row">
+              <div class="col-sm-12">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of box inside container -->
+      </div> 
+    </div>
+    <!-- end of main heading container -->
+    <!-- spacer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top-spacer"> </div>
+        </div>
+      </div>
+    </div>
+    <!--end of spacer  -->
+  </div>  
+  <!--end of main head,box inside container and spacer -->
+  <!-- main body container -->
+<div class="container">
+    <!-- main row -->
+<div class="row">
+      <!-- main column -->
+<div class="col-md-12">
+        <!--panel starting  -->
+    <div class="panel">
+        <!-- panel body starting -->
+        <div class="panel-body">
+            <!-- first row -->
+            <!-- library pic and details -->
+            <div class="row">    
+                <%for(i=0;i<books.length;i++){%>
+                    <div class="row">    
+                      <br>
+                      <div class="col-md-2 col-sm-3 text-center">
+                        <a class="story-title" href="#"><img alt="" src="/images/<%=books[i].img%>" style="width:200px;height:200px" id="allimg"></a>
+                      </div>
+                      <div class="col-md-10 col-sm-9">
+                        <h3 id="step1"><%=books[i].title%></h3>
+                        <div class="row">
+                          <div class="col-xs-9">
+                            <h4><span class="label label-default" id="step2"><%=books[i].author%></span></h4><h4>
+                            <small style="font-family:courier,'new courier';" class="text-muted" id="step3"><%=books[i].genre%>  • <a href="/books/<%=i%>" class="text-muted">Read More</a></small>
+                            </h4></div>
+                          <div class="col-xs-3"></div>
+                        </div>
+                        <br><br>
+                      </div>
+                    </div>
+                    <hr>
+                <%}%>
+             
+            </div>
+            
+            <!-- end of library pic and details -->
+            <!-- end of first row -->
+
+            
+        
+         
+        </div>
+        <!-- end of panel body -->
+    </div>
+    <!--end of panel  -->
+</div>
+      <!-- end of main column -->
+</div>
+    <!-- end of main row -->
+</div>
+  <!-- end of main body container -->                                               
+  <!-- follow us -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Follow Us</h1>
+        <div class="btn-group">
+          <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	        <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	        <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of follow us -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-inline" id="newicon">
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/google_plus_red.png" alt=""></a></li>
+          </ul>  
+        </div>
+        <div class="col-sm-6">
+          <p><h3 id="foot">Contact Us</h3>Administrative Assistant & State public Information Office <br>
+            Kerala State Central Library
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of the footer -->
+</body>
+</html>

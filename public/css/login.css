@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* header styling */
+.navbar-bright {
+  background-color:#111166;
+  color:#fff;
+  margin-bottom: 0;
+  border-width: 0;
+}
+.navbar a {
+  font-family:'Oswald',arial narrow,sans-serif;
+}
+/* footer */
+footer {
+  width: 100%;
+  margin-top:42%;
+  background-color:#cecece;
+  height: 5em;
+}
+#newicon{
+  padding-top: 12px;
+}
+
+/* home styling */
+.navbar-bright a {
+  color:#ccccdd;
+  font-size:14px;
+  text-transform: uppercase;
+  letter-spacing:.08em;
+} 
+.navbar-bright li > a:hover {
+  background-color:#000044;
+}
+/* form */
+.box{
+  width: 350px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 50px;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;  
+}
+.box h1{
+  color: white;
+  /* font-weight: 200; */
+  font-size: 30px;
+}
+.entry{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.entry:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+.sub{
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+  font-size: 18px;
+}
+.sub:hover{
+  background: #2ecc71;
+  color: black;
+}
+#error,#error_pass{
+  font-family: cursive;
+  font-size: 16px;
+}
+/* search field */
+.search-box{
+  position: absolute;
+  top: 50%;
+  left: 91%;
+  transform: translate(-50%,-50%);
+  background: white;
+  height: 40px;
+  border-radius: 40px;
+
+}
+.search-box:hover > .search-text{
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+  background: #111166;
+}
+.search-btn{
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #111166;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  margin-top: 0px;
+}
+.search-text{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #111166;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 20px;
+  width: 0px;
+  margin-top: 10px;
+}
+#choose{
+  padding-left: 50px;
+  color: aliceblue;
+}
+#com{
+  padding-left: 20px;
+  color: white;
+  font-size: 15px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SignUp Page</title>
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body background="images/ground.jpg">
+  <!-- header -->
+  <header class="navbar navbar-bright navbar-fixed-top" role="banner">
+    <div class="container">
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/">Back To Home</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- end of header -->
+  <!-- form -->
+  <div class="form">
+    <form action="/" class="box" onkeyup="return validate2();">
+      <h1>SignUp Here</h1>
+      <input type="text" class="entry" name="" placeholder="Username" required>
+      <input type="text" class="entry" id="email" name="" placeholder="Email id" required>
+      <span id="error"></span>
+      <input type="number" class="entry" id="mobile" name="" placeholder="Mobile number" required>
+      <span id="error_mob"></span>
+      <input type="password" class="entry" id="password" name="" placeholder="Create Password" required title="Password should contain minimum 8 characters including uppercase and lowercase letters,a number and a special character">
+      <span id="error_pass"></span>
+      <input type="password" class="entry" id="password_con" name="" placeholder="Confirm Password" required>
+      <span id="error_pass_con"></span>
+      <input type="submit" class="sub" name="" value="Create account">
+    </form>  
+  </div>
+  <!-- end of form -->
+  <!-- <img id="message" width="300" height="300"> -->
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-inline" id="newicon">
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/google_plus_red.png" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--end of footer  -->
+  <script src="/js/script.js"></script>
+</body>
+</html>
