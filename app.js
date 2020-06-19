@@ -2,7 +2,6 @@ const express = require("express"); //importing express into our file using requ
 const app = new express(); //init express
 const moreRouter = express.Router(); //router for more info
 const arrivalsRouter = express.Router(); //router for new arrivals
-const addbookRouter = express.Router(); //router for adding book
 
 // navbar
 const nav = [
@@ -17,6 +16,7 @@ const booksRouter = require("./src/routes/bookRoutes")(nav);
 const authorsRouter = require("./src/routes/authorRoutes")(nav);
 const loginRouter = require("./src/routes/loginRoutes")(nav);
 const signupRouter = require("./src/routes/signupRoutes")(nav);
+const addbookRouter = require("./src/routes/addbookRoutes")(nav);
 
 app.use(express.static("./public"));
 app.set("view engine","ejs"); //setting template engine to ejs
@@ -50,11 +50,6 @@ arrivalsRouter.get("/",function(req,res){
     })
 });
 
-// adding book
-addbookRouter.get("/",function(req,res){
-    res.render("addbook",{
-        nav,
-        title:"Add book"
-    });
-})
+
+
 app.listen(5000);
