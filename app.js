@@ -2,10 +2,10 @@ const express = require("express"); //importing express into our file using requ
 const app = new express(); //init express
 const moreRouter = express.Router(); //router for more info
 const arrivalsRouter = express.Router(); //router for new arrivals
+const addbookRouter = express.Router(); //router for adding book
 const loginRouter = express.Router(); //router for login
 const signupRouter = express.Router(); //router for signup
-const addbookRouter = express.Router(); //router for adding book
-
+// navbar
 const nav = [
     {link:"/books",name:"Books"},
     {link:"/authors",name:"Authors"},
@@ -13,6 +13,7 @@ const nav = [
     {link:"/login",name:"Login"},
     {link:"/signup",name:"Signup"}
 ];
+
 const booksRouter = require("./src/routes/bookRoutes")(nav);
 const authorsRouter = require("./src/routes/authorRoutes")(nav);
 
@@ -26,39 +27,44 @@ app.use("/authors",authorsRouter);
 app.use("/login",loginRouter);
 app.use("/signup",signupRouter);
 app.use("/addbook",addbookRouter);
+// home page
 app.get("/",function(req,res){
     res.render("index",{
         nav,
         title:"Library|Home"
     });
 });
+// loading more details
 moreRouter.get("/",function(req,res){
     res.render("more",{
         nav,
         title:"Home|More info"
     })
 });
+// new arrivals
 arrivalsRouter.get("/",function(req,res){
     res.render("arrivals",{
         nav,
         title:"Home|New Arrivals"
     })
 });
+// login
 loginRouter.get("/",function(req,res){
     res.render("login",{
        title:"Login page" 
     });
 });
+// signup
 signupRouter.get("/",function(req,res){
     res.render("signup",{
        title:"Signup page" 
     });
 });
+// adding book
 addbookRouter.get("/",function(req,res){
     res.render("addbook",{
         nav,
         title:"Add book"
     });
-    // res.send("This book hasbeen added successfully");
 })
 app.listen(5000);
