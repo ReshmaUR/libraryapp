@@ -3,8 +3,7 @@ const app = new express(); //init express
 const moreRouter = express.Router(); //router for more info
 const arrivalsRouter = express.Router(); //router for new arrivals
 const addbookRouter = express.Router(); //router for adding book
-const loginRouter = express.Router(); //router for login
-const signupRouter = express.Router(); //router for signup
+
 // navbar
 const nav = [
     {link:"/books",name:"Books"},
@@ -16,6 +15,8 @@ const nav = [
 
 const booksRouter = require("./src/routes/bookRoutes")(nav);
 const authorsRouter = require("./src/routes/authorRoutes")(nav);
+const loginRouter = require("./src/routes/loginRoutes")(nav);
+const signupRouter = require("./src/routes/signupRoutes")(nav);
 
 app.use(express.static("./public"));
 app.set("view engine","ejs"); //setting template engine to ejs
@@ -48,18 +49,7 @@ arrivalsRouter.get("/",function(req,res){
         title:"Home|New Arrivals"
     })
 });
-// login
-loginRouter.get("/",function(req,res){
-    res.render("login",{
-       title:"Login page" 
-    });
-});
-// signup
-signupRouter.get("/",function(req,res){
-    res.render("signup",{
-       title:"Signup page" 
-    });
-});
+
 // adding book
 addbookRouter.get("/",function(req,res){
     res.render("addbook",{
