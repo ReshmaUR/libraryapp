@@ -132,7 +132,3 @@ function validate2(){
     }
     
 }
-// for adding book
-function add(){
-    alert("This book hasbeen added successfully");
-}
