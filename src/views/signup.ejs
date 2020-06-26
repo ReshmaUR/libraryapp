@@ -15,7 +15,7 @@
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/">Back To Home</a>
+            <a href="/">Back</a>
           </li>
         </ul>
       </nav>
@@ -24,16 +24,16 @@
   <!-- end of header -->
   <!-- form -->
   <div class="form">
-    <form action="/" class="box" onkeyup="return validate2();">
+    <form action="/signup/addsignup" method="POST" class="box" onkeyup="return validate2();">
       <h1>SignUp Here</h1>
-      <input type="text" class="entry" name="" placeholder="Username" required>
-      <input type="text" class="entry" id="email" name="" placeholder="Email id" required>
+      <input type="text" class="entry" name="username" placeholder="Username" required>
+      <input type="text" class="entry" id="email" name="email" placeholder="Email id" required>
       <span id="error"></span>
-      <input type="number" class="entry" id="mobile" name="" placeholder="Mobile number" required>
+      <input type="number" class="entry" id="mobile" name="mobile" placeholder="Mobile number" required>
       <span id="error_mob"></span>
-      <input type="password" class="entry" id="password" name="" placeholder="Create Password" required title="Password should contain minimum 8 characters including uppercase and lowercase letters,a number and a special character">
+      <input type="password" class="entry" id="password" name="createpass" placeholder="Create Password" required title="Password should contain minimum 8 characters including uppercase and lowercase letters,a number and a special character">
       <span id="error_pass"></span>
-      <input type="password" class="entry" id="password_con" name="" placeholder="Confirm Password" required>
+      <input type="password" class="entry" id="password_con" name="confirmpass" placeholder="Confirm Password" required>
       <span id="error_pass_con"></span>
       <input type="submit" class="sub" name="" value="Create account">
     </form>  

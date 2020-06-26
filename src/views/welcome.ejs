@@ -7,22 +7,20 @@
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
-  <!-- header  -->
+  <!-- header -->
   <header class="navbar navbar-bright navbar-fixed-top" role="banner">
     <div class="container">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">Welcome page</a>
+      </div>
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
+          <%for(i=0;i<welnav.length;i++){%>
           <li>
-            <a href="/index">Home</a>
+            <a href="<%=welnav[i].link%>"><%=welnav[i].name%></a>
           </li>
-          <%for(i=0;i<nav.length;i++){%>
-            <li>
-              <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
-            </li>
-            <%}%>
-
+          <%}%>
         </ul>
         <!-- search field -->
         <div class="search-box">
@@ -30,19 +28,19 @@
           <a class="search-btn" href="#">
             <i class="glyphicon glyphicon-search"></i>
           </a>
-        </div> 
-        <!-- end of search field -->
+        </div>
+        <!--end of search field  -->
       </nav>
     </div>
   </header>
   <!-- end of header -->
   <!--  main head,box inside container and spacer -->
-  <div id="masthead"> 
-    <!-- main heading container --> 
+  <div id="masthead">
+    <!--main heading container  -->
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1>Book Shelf
+          <h1>State Central Library
             <p class="lead"></p>
           </h1>
         </div>
@@ -65,52 +63,90 @@
         <div class="col-md-12">
           <div class="top-spacer"> </div>
         </div>
-      </div> 
+      </div>
     </div>
-    <!-- end of spacer -->
-  </div>
-  <!-- end of main head,box inside container and spacer -->
+    <!--end of spacer  -->
+  </div>  
+  <!--end of main head,box inside container and spacer -->
   <!-- main body container -->
   <div class="container">
     <!-- main row -->
     <div class="row">
       <!-- main column -->
       <div class="col-md-12">
-         <!--panel starting  -->
+        <!--panel starting  -->
         <div class="panel">
-          <!-- panel body starting -->
+        <!-- panel body starting -->
           <div class="panel-body">
-            <!-- row for book details para1-->
+            <!-- first row -->
+            <!-- library pic and details -->
             <div class="row">    
               <br>
               <div class="col-md-3 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=book.image%>" style="width:200px;height:200px"></a>
+                <img alt="" src="/images/librarypic.jpeg" style="width:200px;height:200px" class="img-circle">
               </div>
               <div class="col-md-9 col-sm-9">
-                <h3 id="first"><%=book.title%></h3>
-                
-                <p class="para">
-                  <%=book.content%>
+                <h3 id="first">State Central library, Trivandrum</h3>
+                <p class="para">The Trivandrum Public Library (State Central Library) is one of the oldest Libraries in India. It was established in the year 1829 A.D. during the reign of His Highness Sree Swathi Thirunal Maharaja of Travancore. 
+                  The work of starting and organising the Library was entrusted to Col.Edward Cadogan, then the British Resident who was the grand son of Sir Hans Sloan, the founder of the British Museum.
                 </p>
-                <form action="/update"><input type="text" value="<%=book._id%>" id="" hidden><input type="submit" id="update" name="" value="Update"></form>
-                <form action="/delete"><input type="text" value="<%=book._id%>" id="" hidden><input type="submit" id="delete" name="" value="Delete"></form>
-              </div> 
+                <div class="row">
+                  <!-- <div><a href="/more" id="exp">Read More</a></div>  -->
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br>
+              </div>
             </div>
-            <!-- end of row for book details para1 -->
+            <hr>
+            <!-- end of library pic and details -->
+            <!-- end of first row -->
+
+            <!-- second row -->
+            <!-- news and events -->
+            <div class="row">    
+              <br>
+              <div class="col-md-6 col-sm-2">
+                <!-- <h3 id="sec">News and Events</h3>
+                <p><ul class="para">
+                  <li>Online reservation and renewal facility available.</li>
+                  <li>Vayana velluvili at state central library.</li>
+                  <li>Library & Information Science Certificate Course admission started.</li>
+                </ul></p>
+                <div class="row">
+                  <div class="col-xs-3"></div>
+                </div>
+                <br><br> -->
+              </div>
+              <!-- end of news and events -->
+
+              <!-- pics of staffs -->
+              <!-- <div class="col-md-3 col-sm-5 text-center">
+                <img alt="" src="/images/people1.png" style="width:155px;height:155px" class="img-circle">
+                <br><h3>Principal Secretary</h3>
+              </div>
+              <div class="col-md-3 col-sm-5 text-center">
+                <img alt="" src="/images/people2 (1).png" style="width:155px;height:155px" class="img-circle">
+                <br><h3>State Librarian</h3>
+              </div> -->
+              <!-- end of pics of staffs -->
+            </div>
+            <!-- end of second row -->
+            <hr>
+         
           </div>
           <!-- end of panel body -->
         </div>
-        <!-- end of panel -->
+        <!--end of panel  -->
       </div>
-      <!--end of main column -->
+      <!-- end of main column -->
     </div>
-    <!--end of main row -->
+    <!-- end of main row -->
   </div>
-  <!-- end of main body container -->                                                                              
-  <!--container for follow us buttons -->
+  <!-- end of main body container -->                                               
+  <!-- follow us -->
   <div class="container">
     <div class="row">
-      <div class="col col-sm-12">
+      <div class="col-sm-12">
         <h1>Follow Us</h1>
         <div class="btn-group">
           <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
@@ -120,7 +156,7 @@
       </div>
     </div>
   </div>
-  <!-- end of container for follow us buttons -->
+  <!-- end of follow us -->
   <!-- footer -->
   <footer>
     <div class="container">
@@ -130,7 +166,7 @@
             <li><a href="#"><img src="/images/twitter.png" alt=""></a></li>
             <li><a href="#"><img src="/images/facebook.png" alt=""></a></li>
             <li><a href="#"><img src="/images/google_plus_red.png" alt=""></a></li>
-          </ul>
+          </ul>  
         </div>
         <div class="col-sm-6">
           <p><h3 id="foot">Contact Us</h3>Administrative Assistant & State public Information Office <br>
@@ -140,8 +176,6 @@
       </div>
     </div>
   </footer>
-  <!-- end of footer -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/js/script.js"></script>
+  <!-- end of the footer -->
 </body>
 </html>

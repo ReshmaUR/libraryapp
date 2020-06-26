@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%=title%></title>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-  <link rel="stylesheet" href="/css/signup.css">
+  <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body background="/images/grnd4.jpg">
@@ -38,14 +38,13 @@
   <!-- end of header -->
   <!-- form -->
   <div class="form">
-    <form method="POST" action="/admin/addbook" class="box">
-        <h1>Add book</h1>
-        <input type="text" class="entry" name="title" placeholder="Name of Book" required>
-        <input type = "text" class="entry" name="author" placeholder ="Name of Author" required>
-        <input type="text" class="entry" name="genre" placeholder="Genre of Book" required>
+    <form method="POST" action="/admins/addauthor" class="box">
+        <h1>Add author</h1>
+        <input type="text" class="entry" name="title" placeholder="Name of Author" required>
+        <input type = "text" class="entry" name="field" placeholder ="Field of Author" required>
         <!-- <span id="com">Choose the image of book</span> -->
         <!-- <p id="com">Choose the image of book</p> -->
-        <input type="text" class="entry" name="content" placeholder="About the book">
+        <input type="text" class="entry" name="content" placeholder="About the author">
         <input type="file" name="image" accept="image/*" id="choose" required>
         <input type="submit" class="sub" name="" value="Submit">
     </form>

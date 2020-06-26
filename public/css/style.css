@@ -286,6 +286,23 @@ a,a:hover {
   margin-left: 20px;
 }
 
+/* delete and update */
+#update{
+color: white;
+background-color: #000044;
+/* margin-top: 80px; */
+width: 120px;
+border-radius: 10px;
+}
+#delete{
+color: white;
+background-color: #000044;
+/* margin-left: 80px; */
+/* margin-top: 20px; */
+width: 120px;
+border-radius: 10px;
+}
+
     /* follow us buttons */
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}

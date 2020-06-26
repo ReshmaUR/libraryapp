@@ -15,7 +15,7 @@
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
           <li>
-            <a href="/">Home</a>
+            <a href="/index">Home</a>
           </li>
           <%for(i=0;i<nav.length;i++){%>
             <li>
@@ -84,10 +84,10 @@
             <div class="row">    
               <br>
               <div class="col-md-3 col-sm-3 text-center">
-                <a class="story-title" href="#"><img alt="" src="/images/<%=author.img%>" style="width:200px;height:200px" class="img-circle"></a>
+                <a class="story-title" href="#"><img alt="" src="/images/<%=author.image%>" style="width:200px;height:200px" class="img-circle"></a>
               </div>
               <div class="col-md-9 col-sm-9">
-                <h3 id="first"><%=author.name%></h3>
+                <h3 id="first"><%=author.title%></h3>
                 <p class="para">
                  <%=author.content%>
                 </p>
